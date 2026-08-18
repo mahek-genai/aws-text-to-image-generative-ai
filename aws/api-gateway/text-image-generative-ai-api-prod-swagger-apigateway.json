@@ -1,0 +1,18 @@
+{
+  "swagger" : "2.0",
+  "info" : {"version" : "2025-07-16T11:28:37Z","title" : "text-image-generative-ai-api"},
+  "host" : "zcw3nzwfif.execute-api.us-east-1.amazonaws.com",
+  "basePath" : "/prod",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/" : {
+      "options" : {"consumes" : [ "application/json" ],"responses" : {"204" : {"description" : "204 response","headers" : {"Access-Control-Allow-Origin" : {"type" : "string"},"Access-Control-Allow-Methods" : {"type" : "string"},"Access-Control-Allow-Headers" : {"type" : "string"}}},"x-amazon-apigateway-integration" : {"responses" : {"default" : {"statusCode" : "204","responseParameters" : {"method.response.header.Access-Control-Allow-Methods" : "'OPTIONS,GET,PUT,POST,DELETE,PATCH,HEAD'","method.response.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'","method.response.header.Access-Control-Allow-Origin" : "'*'"}}},"requestTemplates" : {"application/json" : "{ statusCode: 200 }"},"passthroughBehavior" : "when_no_match","type" : "mock"}
+    },
+    "/generate" : {
+      "get" : {"responses" : {},"x-amazon-apigateway-integration" : {"httpMethod" : "POST","uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:683001807871:function:get_image_function/invocations","passthroughBehavior" : "when_no_match","type" : "aws_proxy"}},
+      "post" : {"responses" : {},"x-amazon-apigateway-integration" : {"httpMethod" : "POST","uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:683001807871:function:start_process_function/invocations","passthroughBehavior" : "when_no_match","type" : "aws_proxy"}},
+      "options" : {"consumes" : [ "application/json" ],"responses" : {"204" : {"description" : "204 response","headers" : {"Access-Control-Allow-Origin" : {"type" : "string"},"Access-Control-Allow-Methods" : {"type" : "string"},"Access-Control-Allow-Headers" : {"type" : "string"}}},"x-amazon-apigateway-integration" : {"responses" : {"default" : {"statusCode" : "204","responseParameters" : {"method.response.header.Access-Control-Allow-Methods" : "'OPTIONS,GET,PUT,POST,DELETE,PATCH,HEAD'","method.response.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'","method.response.header.Access-Control-Allow-Origin" : "'*'"}}},"requestTemplates" : {"application/json" : "{ statusCode: 200 }"},"passthroughBehavior" : "when_no_match","type" : "mock"}
+    }
+  },
+  "x-amazon-apigateway-gateway-responses" : {"DEFAULT_5XX" : {"statusCode" : 500,"responseParameters" : {"gatewayresponse.header.Access-Control-Allow-Origin" : "'*'"}}}
+}
