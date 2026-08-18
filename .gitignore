@@ -1,0 +1,26 @@
+# macOS system files
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.*
+
+# AWS credentials
+.aws/
+credentials
+
+# IDE files
+.vscode/
+.idea/
+
+# Lambda dependency packages
+pillowlayer.zip
+python/
